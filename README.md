@@ -1,3 +1,10 @@
+# Frontend for Group Problem/Solution management 
+
+This is just a fun personal project, meant to be used as a learning opportunity for:
+- how to build end to end backend using cloud infrastructure tooling/infrastructure and microservices design pattern
+- how to build functional, intuitive, and interactive UI with modern JS technology
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
