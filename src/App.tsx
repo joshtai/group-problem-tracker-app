@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <LoginModal show={true} onCancel={() => {}} onLogin={(email, password) => { console.log(email + " " + password);}}></LoginModal>
+        <LoginModal onClose={() => {}} onLogin={(email, password) => { console.log(email + " " + password);}}></LoginModal>
         <a
           className="App-link"
           href="https://reactjs.org"
