@@ -1,8 +1,10 @@
 {
-    "realm": "ProblemTracker",
-    "auth-server-url": "http://localhost:8180/auth",
-    "ssl-required": "external",
-    "resource": "my-react-client",
-    "public-client": true,
-    "confidential-port": 0
-  }
+  "realm": "ProblemTracker",
+  "auth-server-url": "http://localhost:8180/auth/",
+  "ssl-required": "external",
+  "resource": "tracker-app",
+  "credentials": {
+    "secret": "6a7b2441-0d25-43dd-a487-71c6ef9e95e4"
+  },
+  "confidential-port": 0
+}
