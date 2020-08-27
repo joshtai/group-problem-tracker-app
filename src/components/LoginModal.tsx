@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Button, Modal, Form } from 'react-bootstrap';
+import { Button, Modal, Form, Navbar, Nav } from 'react-bootstrap';
 
 export interface LoginModalProps {
   readonly onClose: () => void;
@@ -9,6 +9,8 @@ export interface LoginModalProps {
 
 export default (props: LoginModalProps) => {
   const [show, setShow] = useState<boolean>(true);
+
+  const [action, setAction] = useState<string>("Login");
   
   return (
 
@@ -25,10 +27,26 @@ export default (props: LoginModalProps) => {
 
       }
       }>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <Navbar>
+          <Nav variant="tabs" className="ml-auto" defaultActiveKey="login">
+            <Nav.Item>
+          <Nav.Link eventKey="login" href="#" onClick={() => {setAction("Login");}}>
+            Login
+           </Nav.Link>
+           </Nav.Item>
+           <Nav.Item>
+          <Nav.Link href="#" onClick={() => {setAction("Register");}}>
+            Register
+          </Nav.Link>
+          </Nav.Item>
+        </Nav>
+
+
+          </Navbar>
 
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -52,7 +70,7 @@ export default (props: LoginModalProps) => {
             Cancel
           </Button>
           <Button variant="primary" type="submit">
-            Login
+            {action}
           </Button>
         </Modal.Footer>
       </Form>

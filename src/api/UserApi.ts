@@ -1,4 +1,4 @@
-import {Api} from "./api";
+import {Api} from "./Api";
 import {AxiosRequestConfig} from "axios";
 
 export class UserApi extends Api {
