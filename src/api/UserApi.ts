@@ -9,7 +9,7 @@ export class UserApi extends Api {
     }
 
 
-    public loginUser(credentials) {
+    public loginUser(credentials: any) {
         return this.post<string, any, AxiosResponse<string>>(`${userServiceUrl}`,credentials)
     }
 

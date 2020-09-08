@@ -2,16 +2,22 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import LoginModal from './components/LoginModal';
+import Navbar from './components/Navbar';
+import MainLayout from './layout/MainLayout';
 
 function App() {
+
+
   return (
     <div className="App">
+      <MainLayout></MainLayout>
       <header className="App-header">
+        
+      
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <LoginModal onClose={() => {}} onLogin={(email, password) => { console.log(email + " " + password); }}></LoginModal>
         <a
           className="App-link"
           href="https://reactjs.org"
